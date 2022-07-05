@@ -1,0 +1,37 @@
+# 2021.07.27
+# A^{star} set of maximum points of U_{1}(S,alpha) = -(E(W)-4)^{2}
+# V = total number of triggers ~ Binomial(N-S+1,alpha)
+
+N = 180;
+wanted_triggers=4
+alpha = seq(0,1,by=0.05); S = seq(1,N,by=1);
+alpha2 = wanted_triggers/(N-S+1)
+alpha2[alpha2>=1] = 1
+z = matrix(NaN, length(S),length(alpha));
+for (i in 1:length(alpha)) {
+  for (j in 1:length(S)) {
+    z[j,i] = - (N-S[j]+1)*alpha[i]*(1-alpha[i]);
+  }
+}
+z = t(z)
+U2 = z
+require(plotly)
+
+fig <- plot_ly(x = S)
+fig = fig %>% add_contour(x = S, y = ~alpha,z = ~U2, type = "contour", 
+                          contours = list(coloring = 'heatmap', 
+                                          showlabels = TRUE))%>%colorbar(
+                                            title = "Contour plot of U_{2}")
+fig = fig %>% add_trace(x =S, y =~alpha2, type = "scatter",  mode = 'markers',
+                        marker = list(color="red", size = 0.5),
+                        showlegend=FALSE)
+fig = fig %>% add_trace(x =S, y =~alpha2, type = "scatter",  mode = 'markers', 
+                        name ="A^{*}", 
+                        showlegend=TRUE, marker = list(color="red", size = 3.5))
+fig <- fig %>% layout(legend = list(x = 200, y = 0.5), 
+                      xaxis = list(title = "starting point"),
+                      yaxis = list(title = "significance level"))
+fig
+
+
+rm(U2, z, alpha, alpha2, i, j, N, S, wanted_triggers)
