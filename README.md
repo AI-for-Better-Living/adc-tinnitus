@@ -6,7 +6,7 @@ Code related to the paper "Adaptive data collection for intra-individual studies
 
 The structure of the code is detailed in the following graph.
 
-https://github.com/AI-for-Better-Living/adc-tinnitus/blob/main/code_structure1.png
+![](https://github.com/AI-for-Better-Living/adc-tinnitus/blob/main/code_structure1.png)
 
 In particular, the figures and tables in the paper were obtained through the following scripts. 
 
