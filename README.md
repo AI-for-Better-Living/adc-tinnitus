@@ -19,6 +19,15 @@ In particular, the Figures and Tables in the paper were obtained through the fol
 | Figure 3 |  ecdfs.R.         |
 | Table 1  |  wlc_sim.R, wlc_sim2.R, wlc_real.R    |
 
+On the other hand, in the following we give the scripts which generate Figures and Tables in the Supplement. 
+
+| Results  |  Scripts          |
+| -------- | ---------------   |
+| Figure 1 |  choice_of_S.R.    |
+| Figure 2 |  do_problem.R.    |  
+| Table 1 |  prevented_tasks.R.    |  
+| Figure 3 |  sen_analysis.R.    | 
+
 Part of Table 1 and a portion of Figures 2 and 3 can not be replicated by the user because of privacy issues with the tinnitus dataset. Nevertheless, the code which produced them is included and a fake "real_data.RData" file has been added to simuate similar results. 
 
 Notice that Algorithm 1 and Algorithm 2 of the paper are implemented, respectively, in the scripts "trigger0.R" and "trigger1.R". 
