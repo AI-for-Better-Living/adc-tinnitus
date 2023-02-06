@@ -1,5 +1,0 @@
-par(mfrow=c(2,2))
-source("ecdf_f1score_sim.R")
-#source("ecdf_f1score_real.R")
-source("ecdf_u1_sim.R")
-#source("ecdf_u1_real.R")
