@@ -4,7 +4,6 @@ png(file="results/choice_of_S.png",width=1778, height=696)
 
 N=5000
 
-# setwd("~/Code/triggering algorithm/revised version/code")
 # seeds5 = sample(c(1:1000000), N, replace = FALSE)
 load("data/seeds5.RData")
 
